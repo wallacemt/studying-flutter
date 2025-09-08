@@ -96,15 +96,15 @@ class PhotosWidget extends StatelessWidget {
         width: double.infinity,
       ),
     );
-    return new GestureDetector(onTapDown: openGallery, child: childdren);
+    return new GestureDetector(onTapDown: null, child: childdren);
   }
 }
 
 void openGallery() {
   print("opening");
-  android_intent.Intent()
-    ..setAction(android_action.Action.ACTION_VIEW)
-    ..setType("image/*")
-    ..addFlag(Flag.FLAG_ACTIVITY_NEW_TASK)
-    ..startActivity().catchError((e) => print(e));
+  // android_intent.Intent()
+  //   ..setAction(android_action.Action.ACTION_VIEW)
+  //   ..setType("image/*")
+  //   ..addFlag(Flag.FLAG_ACTIVITY_NEW_TASK)
+  //   ..startActivity().catchError((e) => print(e));
 }
